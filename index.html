@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" type="image/png" href="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Super Installer | Calgary Flooring Installation Experts</title>
+<meta name="description" content="Professional flooring installation in Calgary, Alberta. Precision vinyl plank, hardwood, tile & backsplash installation with expert material selection guidance. Get a free quote today." />
+<meta name="keywords" content="flooring installation Calgary, hardwood installation Calgary, vinyl plank installation, tile installation Calgary, flooring contractor Calgary, floor installer Calgary" />
+<meta property="og:title" content="Super Installer | Calgary Flooring Installation Experts" />
+<meta property="og:description" content="Precision flooring installation with expert guidance on selecting the right materials for your space. Serving Calgary and surrounding areas." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { inter: ['Inter','sans-serif'], mono: ['JetBrains Mono','monospace'] },
+      colors: {
+        background: 'hsl(210 20% 98%)',
+        foreground: 'hsl(0 0% 18%)',
+        card: 'hsl(0 0% 100%)',
+        primary: { DEFAULT: 'hsl(216 62% 26%)', foreground: 'hsl(0 0% 98%)' },
+        secondary: { DEFAULT: 'hsl(0 0% 75%)', foreground: 'hsl(0 0% 18%)' },
+        muted: { DEFAULT: 'hsl(210 20% 96%)', foreground: 'hsl(0 0% 45%)' },
+        border: 'hsl(0 0% 89%)',
+        input: 'hsl(0 0% 85%)',
+        destructive: 'hsl(0 84.2% 60.2%)',
+      },
+      borderRadius: { sm: '0.25rem' },
+    }
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif}
+/* scroll-reveal (framer-motion replacement) */
+[data-animate]{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+[data-animate].in-view{opacity:1;transform:translateY(0)}
+[data-animate-scale]{opacity:0;transform:scale(.97);transition:opacity .6s ease,transform .6s ease}
+[data-animate-scale].in-view{opacity:1;transform:scale(1)}
+.hero-line{transform:scaleX(0);transform-origin:left;transition:transform 1.2s ease .6s}
+.hero-line.in-view{transform:scaleX(1)}
+.blueprint{background-image:linear-gradient(hsl(0 0% 75%) 1px,transparent 1px),linear-gradient(90deg,hsl(0 0% 75%) 1px,transparent 1px)}
+.outline-text{-webkit-text-stroke:1px rgba(255,255,255,.4)}
+.spec-label{opacity:0;transform:translateY(4px);transition:opacity .2s,transform .2s}
+.navlink-wrap:hover .spec-label{opacity:1;transform:translateY(0)}
+.svc-materials{display:none}
+.svc-card.expanded .svc-materials{display:block}
+.svc-card.expanded .svc-arrow{transform:rotate(90deg)}
+.proj-overlay{opacity:0;transition:opacity .5s}
+.proj-card:hover .proj-overlay{opacity:1}
+.proj-card:hover img{transform:scale(1.1)}
+.proj-card img{transition:transform .7s}
+.brand-card:hover .brand-img{transform:scale(1.05)}
+.brand-img{transition:transform .7s}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}[data-animate],[data-animate-scale]{opacity:1;transform:none}}
+</style>
+</head>
+<body class="bg-background text-foreground font-inter">
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<header class="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 md:pt-6">
+  <nav id="mainNav" class="w-full max-w-7xl transition-all duration-500 px-6 py-3 rounded-sm bg-white/60 backdrop-blur-md border border-white/30">
+    <div class="flex items-center justify-between">
+      <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false" class="flex items-center gap-3">
+        <img src="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" alt="Super Installer Logo" class="h-10 w-auto" />
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <div class="relative navlink-wrap"><span class="spec-label absolute -top-5 left-0 text-[10px] font-mono text-secondary tracking-wider">01 / SRVC</span><a href="#services" class="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">Services</a></div>
+        <div class="relative navlink-wrap"><span class="spec-label absolute -top-5 left-0 text-[10px] font-mono text-secondary tracking-wider">02 / AUTH</span><a href="#why-us" class="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">Why Us</a></div>
+        <div class="relative navlink-wrap"><span class="spec-label absolute -top-5 left-0 text-[10px] font-mono text-secondary tracking-wider">03 / PRCSS</span><a href="#process" class="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">Process</a></div>
+        <div class="relative navlink-wrap"><span class="spec-label absolute -top-5 left-0 text-[10px] font-mono text-secondary tracking-wider">04 / INSP</span><a href="#inspiration" class="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">Inspiration</a></div>
+        <div class="relative navlink-wrap"><span class="spec-label absolute -top-5 left-0 text-[10px] font-mono text-secondary tracking-wider">05 / PRJCT</span><a href="#projects" class="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">Projects</a></div>
+        <div class="relative navlink-wrap"><span class="spec-label absolute -top-5 left-0 text-[10px] font-mono text-secondary tracking-wider">06 / ABUT</span><a href="#about" class="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">About</a></div>
+        <div class="relative navlink-wrap"><span class="spec-label absolute -top-5 left-0 text-[10px] font-mono text-secondary tracking-wider">07 / CNTCT</span><a href="#contact" class="text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 tracking-wide">Contact</a></div>
+      </div>
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="tel:+15872287873" class="flex items-center gap-2 text-sm font-medium text-primary">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          587.228.7873
+        </a>
+        <a href="#contact" class="inline-flex items-center justify-center bg-[#1A3A6D] hover:bg-[#142d57] text-white font-semibold tracking-wide px-6 h-11 shadow-sm rounded-sm text-sm transition-colors">Get a Free Quote</a>
+      </div>
+      <button id="mobileToggle" class="lg:hidden p-2 text-foreground" aria-label="Toggle navigation menu">
+        <svg id="iconMenu" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+        <svg id="iconX" class="w-6 h-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="lg:hidden overflow-hidden hidden">
+      <div class="pt-6 pb-4 flex flex-col gap-4 border-t border-border/50 mt-4">
+        <a href="#services" class="mobile-link flex items-center justify-between text-base font-medium text-foreground/80 hover:text-primary transition-colors">Services<span class="text-[10px] font-mono text-secondary">01 / SRVC</span></a>
+        <a href="#why-us" class="mobile-link flex items-center justify-between text-base font-medium text-foreground/80 hover:text-primary transition-colors">Why Us<span class="text-[10px] font-mono text-secondary">02 / AUTH</span></a>
+        <a href="#process" class="mobile-link flex items-center justify-between text-base font-medium text-foreground/80 hover:text-primary transition-colors">Process<span class="text-[10px] font-mono text-secondary">03 / PRCSS</span></a>
+        <a href="#inspiration" class="mobile-link flex items-center justify-between text-base font-medium text-foreground/80 hover:text-primary transition-colors">Inspiration<span class="text-[10px] font-mono text-secondary">04 / INSP</span></a>
+        <a href="#projects" class="mobile-link flex items-center justify-between text-base font-medium text-foreground/80 hover:text-primary transition-colors">Projects<span class="text-[10px] font-mono text-secondary">05 / PRJCT</span></a>
+        <a href="#about" class="mobile-link flex items-center justify-between text-base font-medium text-foreground/80 hover:text-primary transition-colors">About<span class="text-[10px] font-mono text-secondary">06 / ABUT</span></a>
+        <a href="#contact" class="mobile-link flex items-center justify-between text-base font-medium text-foreground/80 hover:text-primary transition-colors">Contact<span class="text-[10px] font-mono text-secondary">07 / CNTCT</span></a>
+        <div class="pt-4 border-t border-border/50 flex flex-col gap-3">
+          <a href="tel:+15872287873" class="flex items-center gap-2 text-sm font-medium text-primary">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            587.228.7873
+          </a>
+          <a href="#contact" class="mobile-link inline-flex items-center justify-center bg-[#1A3A6D] hover:bg-[#142d57] text-white font-semibold w-full h-12 rounded-sm transition-colors">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0">
+    <img id="heroImg" src="https://media.base44.com/images/public/69c81ec17595940e1e44aac2/649504a46_generated_7f33e429.png" alt="Modern Calgary interior with premium hardwood flooring installation" class="w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/30"></div>
+    <div class="absolute inset-0 opacity-[0.04] blueprint" style="background-size:60px 60px"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-12 w-full pt-32 pb-20 md:pt-40 md:pb-32">
+    <div class="max-w-3xl">
+      <div data-animate>
+        <span class="inline-block font-mono text-xs tracking-[0.3em] text-secondary/80 uppercase mb-6">51.0447° N, 114.0719° W — Calgary, Alberta</span>
+      </div>
+      <div data-animate class="flex items-center gap-5 mb-6">
+        <img src="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" alt="Super Installer" class="h-20 md:h-28 w-auto brightness-0 invert drop-shadow-lg shrink-0" />
+        <h1 class="text-4xl md:text-6xl lg:text-7xl font-inter leading-[1.05]">
+          <span class="font-light text-white/70 outline-text">Calgary's</span><br />
+          <span class="font-extrabold text-white">Flooring Installation</span><br />
+          <span class="font-extrabold text-white">Experts</span>
+        </h1>
+      </div>
+      <p data-animate class="text-lg md:text-xl text-white/75 max-w-xl mb-10 leading-relaxed">
+        Premium flooring supply and precision installation — residential and light commercial — with expert guidance on selecting the right materials for your space.
+      </p>
+      <div data-animate class="flex flex-col sm:flex-row gap-4">
+        <a href="#contact" class="inline-flex items-center justify-center bg-white text-[#1A3A6D] hover:bg-white/95 font-bold tracking-wide text-base px-8 h-14 group transition-all duration-300 shadow-lg rounded-sm">
+          Get a Free Quote
+          <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="tel:+15872287873" class="inline-flex items-center justify-center border border-white/50 text-[#1A3A6D] bg-white/90 hover:bg-white hover:border-white font-semibold tracking-wide text-base px-8 h-14 w-full sm:w-auto rounded-sm transition-colors">
+          <svg class="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call Now
+        </a>
+      </div>
+    </div>
+    <div class="hero-line absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-secondary/60 via-secondary/20 to-transparent" data-animate-line></div>
+  </div>
+</section>
+
+<!-- ═══════════ COMMERCIAL BANNER ═══════════ -->
+<section class="py-16 bg-background border-y border-border/50 relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+  <div class="max-w-7xl mx-auto px-4 md:px-12">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+      <div data-animate class="flex items-start gap-5 p-7 border border-primary/15 bg-primary/[0.03] hover:border-primary/30 transition-colors">
+        <div class="w-12 h-12 border border-primary/20 flex items-center justify-center shrink-0 mt-0.5">
+          <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-primary mb-2">Residential Flooring</h3>
+          <p class="text-muted-foreground text-sm leading-relaxed mb-4">Carpet, vinyl plank, hardwood, tile — we supply <em>and</em> install the right floor for every room in your home, from basement to bedroom.</p>
+          <a href="#services" class="inline-flex items-center text-primary hover:text-primary/80 font-semibold text-sm group">Explore Services
+            <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+      <div data-animate class="flex items-start gap-5 p-7 border border-border/60 bg-card hover:border-secondary/40 transition-colors">
+        <div class="w-12 h-12 border border-border/60 flex items-center justify-center shrink-0 mt-0.5">
+          <svg class="w-5 h-5 text-foreground/60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M12 14h.01M16 10h.01M16 14h.01M8 10h.01M8 14h.01"/></svg>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-foreground mb-2">Light Commercial</h3>
+          <p class="text-muted-foreground text-sm leading-relaxed mb-4">Carpet tile, vinyl plank, and commercial-grade flooring for offices, retail spaces, and commercial interiors — durable, specification-grade, and built to perform.</p>
+          <a href="#contact" class="inline-flex items-center text-foreground/70 hover:text-primary font-semibold text-sm group">Get a Commercial Quote
+            <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SERVICES ═══════════ -->
+<section id="services" class="py-24 md:py-32 bg-background relative">
+  <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div data-animate class="mb-16">
+      <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">01 / Services</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-primary mt-4 tracking-tight">Installation Services</h2>
+      <p class="text-muted-foreground mt-4 max-w-2xl text-lg leading-relaxed">We supply <strong class="text-foreground font-semibold">and</strong> install — sourcing premium materials from our trusted brand partners for residential and light commercial projects.</p>
+    </div>
+    <div id="servicesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ═══════════ WHY CHOOSE ═══════════ -->
+<section id="why-us" class="py-24 md:py-32 bg-primary relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.03] blueprint" style="background-size:80px 80px"></div>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-12">
+    <div data-animate class="text-center mb-20">
+      <span class="font-mono text-xs text-secondary/60 tracking-[0.3em] uppercase">02 / Authority</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-white mt-4 tracking-tight">Why Choose Super Installer</h2>
+      <p class="text-white/60 mt-4 max-w-xl mx-auto text-lg leading-relaxed">Professional installation built on precision, experience, and proper application.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+      <div data-animate class="text-center md:text-left">
+        <div class="inline-flex items-center justify-center w-14 h-14 border border-secondary/20 mb-6">
+          <svg class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="22" y1="12" x2="18" y2="12"/><line x1="6" y1="12" x2="2" y2="12"/><line x1="12" y1="6" x2="12" y2="2"/><line x1="12" y1="22" x2="12" y2="18"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 tracking-tight">Precision Installation</h3>
+        <p class="text-white/55 leading-relaxed">Every project is executed with exact measurements, clean lines, and expert technique — no shortcuts, no compromises.</p>
+      </div>
+      <div data-animate class="text-center md:text-left">
+        <div class="inline-flex items-center justify-center w-14 h-14 border border-secondary/20 mb-6">
+          <svg class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 tracking-tight">Correct Product Selection &amp; Application</h3>
+        <p class="text-white/55 leading-relaxed">We guide you in choosing and installing materials that perform properly in your specific space and conditions.</p>
+      </div>
+      <div data-animate class="text-center md:text-left">
+        <div class="inline-flex items-center justify-center w-14 h-14 border border-secondary/20 mb-6">
+          <svg class="w-6 h-6 text-secondary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9Z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3 tracking-tight">Built to Last</h3>
+        <p class="text-white/55 leading-relaxed">Durable, clean finishes designed to stand up to real-world use — flooring that looks great and performs over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PROCESS ═══════════ -->
+<section id="process" class="py-24 md:py-32 bg-background relative overflow-hidden">
+  <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div data-animate class="mb-16">
+      <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">03 / Process</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-primary mt-4 tracking-tight">Our Process</h2>
+      <p class="text-muted-foreground mt-4 max-w-xl text-lg leading-relaxed">A streamlined, professional approach from consultation to completion.</p>
+    </div>
+    <div id="processGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12"></div>
+    <div data-animate class="mt-16 text-center">
+      <a href="#contact" class="inline-flex items-center justify-center bg-[#1A3A6D] hover:bg-[#142d57] text-white font-bold tracking-wide text-base px-10 h-14 group shadow-sm rounded-sm transition-colors">
+        Start Your Project
+        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BRAND PARTNERS ═══════════ -->
+<section id="inspiration" class="py-24 md:py-32 bg-muted relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.025] blueprint" style="background-size:80px 80px"></div>
+  <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+  <div class="relative max-w-7xl mx-auto px-6 md:px-12">
+    <div data-animate class="mb-6">
+      <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">Design Inspiration</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-primary mt-4 tracking-tight">Premium Brand Partners</h2>
+    </div>
+    <div data-animate class="mb-14 flex flex-col md:flex-row gap-6 md:items-end justify-between">
+      <p class="text-muted-foreground text-lg leading-relaxed max-w-2xl">Super Installer supplies and installs flooring from Canada's most trusted brands — for <strong class="text-foreground font-semibold">residential</strong> and <strong class="text-foreground font-semibold">light commercial</strong> projects alike. We don't just install — we guide you through product selection and supply the materials, ensuring the right floor for your space, performance needs, and budget.</p>
+      <div class="flex gap-4 shrink-0">
+        <div class="text-center px-6 py-4 border border-primary/20 bg-primary/5">
+          <span class="block text-2xl font-extrabold text-primary">Residential</span>
+          <span class="text-xs text-muted-foreground font-mono tracking-wider">Homes &amp; Condos</span>
+        </div>
+        <div class="text-center px-6 py-4 border border-secondary/30 bg-background">
+          <span class="block text-2xl font-extrabold text-foreground/80">Commercial</span>
+          <span class="text-xs text-muted-foreground font-mono tracking-wider">Light Commercial</span>
+        </div>
+      </div>
+    </div>
+    <div id="brandsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5"></div>
+    <p data-animate class="mt-10 text-center text-sm text-muted-foreground">
+      Not sure which product is right for your space?
+      <a href="#contact" class="text-primary font-semibold hover:underline underline-offset-2">Book a free consultation — we'll guide you.</a>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ PORTFOLIO ═══════════ -->
+<section id="projects" class="py-24 md:py-32 bg-muted relative">
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div data-animate class="mb-16">
+      <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">04 / Projects</span>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-primary mt-4 tracking-tight">Proof of Craft</h2>
+      <p class="text-muted-foreground mt-4 max-w-xl text-lg leading-relaxed">Quality workmanship, delivered project after project across Calgary.</p>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div id="projectsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"></div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section id="about" class="py-24 md:py-32 bg-background relative">
+  <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div data-animate>
+        <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">05 / About</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-primary mt-4 tracking-tight">Super Installer</h2>
+        <div class="mt-8 space-y-6">
+          <p class="text-foreground/80 text-lg leading-relaxed">Super Installer specializes in high-quality flooring installation across Calgary. With years of hands-on experience, we focus on precision, proper product application, and clean, professional results.</p>
+          <p class="text-foreground/80 text-lg leading-relaxed">Every project is approached with a structured process and attention to detail, ensuring flooring that looks great and performs over time.</p>
+        </div>
+        <div class="mt-10 flex justify-center">
+          <img src="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" alt="Super Installer" class="h-20 w-auto opacity-90" />
+        </div>
+        <div class="grid grid-cols-3 gap-8 mt-10 pt-8 border-t border-border/50">
+          <div><span class="text-3xl md:text-4xl font-extrabold text-primary">500+</span><p class="text-sm text-muted-foreground mt-1">Projects Completed</p></div>
+          <div><span class="text-3xl md:text-4xl font-extrabold text-primary">10+</span><p class="text-sm text-muted-foreground mt-1">Years Experience</p></div>
+          <div><span class="text-3xl md:text-4xl font-extrabold text-primary">5-Star</span><p class="text-sm text-muted-foreground mt-1">Service</p></div>
+        </div>
+      </div>
+      <div data-animate-scale class="relative">
+        <div class="aspect-square overflow-hidden">
+          <img id="aboutImg" src="https://media.base44.com/images/public/69c81ec17595940e1e44aac2/27b514d72_generated_image.png" alt="Premium flooring installation by Super Installer in Calgary" class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute -bottom-4 -right-4 w-32 h-32 border border-secondary/20"></div>
+        <div class="absolute -top-4 -left-4 w-20 h-20 border border-primary/10"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA ═══════════ -->
+<section class="py-24 md:py-32 bg-muted relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.03] blueprint" style="background-size:60px 60px"></div>
+  <div class="relative max-w-3xl mx-auto px-6 md:px-12 text-center">
+    <div data-animate>
+      <h2 class="text-3xl md:text-5xl font-extrabold text-primary tracking-tight">Ready to get started?</h2>
+      <p class="text-muted-foreground mt-4 text-lg leading-relaxed">Get a fast, professional quote for your flooring project.</p>
+      <a href="#contact" class="mt-10 inline-flex items-center justify-center bg-[#1A3A6D] hover:bg-[#142d57] text-white font-bold tracking-wide text-base px-10 h-14 group shadow-sm rounded-sm transition-colors">
+        Request a Quote
+        <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section id="contact" class="py-24 md:py-32 bg-background relative">
+  <div class="absolute top-0 left-0 w-[1px] h-full bg-gradient-to-b from-transparent via-secondary/20 to-transparent"></div>
+  <div class="max-w-7xl mx-auto px-6 md:px-12">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div data-animate>
+        <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">06 / Contact</span>
+        <h2 class="text-3xl md:text-5xl font-extrabold text-primary mt-4 tracking-tight">Get in Touch</h2>
+        <p class="text-muted-foreground mt-4 text-lg leading-relaxed max-w-md">Ready to transform your space? Reach out for a free consultation and quote.</p>
+        <div class="mt-12 space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 border border-primary/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div><p class="text-sm text-muted-foreground">Phone</p><a href="tel:+15872287873" class="text-lg font-semibold text-foreground hover:text-primary transition-colors">587.228.7873</a></div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 border border-primary/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </div>
+            <div><p class="text-sm text-muted-foreground">Email</p><a href="mailto:admin@superinstaller.ca" class="text-lg font-semibold text-foreground hover:text-primary transition-colors">admin@superinstaller.ca</a></div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 border border-primary/20 flex items-center justify-center">
+              <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div><p class="text-sm text-muted-foreground">Service Area</p><p class="text-lg font-semibold text-foreground">Calgary, Alberta</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-animate>
+        <div id="formSuccess" class="hidden h-full flex-col items-center justify-center text-center p-12 border border-border bg-card">
+          <svg class="w-16 h-16 text-primary mb-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3 class="text-2xl font-bold text-foreground mb-2">Quote Request Sent</h3>
+          <p class="text-muted-foreground">Thank you! We'll review your project details and get back to you within 24 hours.</p>
+        </div>
+        <form id="leadForm" class="space-y-5 p-8 md:p-10 border border-border bg-card">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="space-y-2">
+              <label for="name" class="text-sm font-medium block">Full Name <span class="text-destructive">*</span></label>
+              <input id="name" name="name" required placeholder="John Smith" class="w-full h-12 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary" />
+            </div>
+            <div class="space-y-2">
+              <label for="phone" class="text-sm font-medium block">Phone <span class="text-destructive">*</span></label>
+              <input id="phone" name="phone" required type="tel" placeholder="(403) 555-1234" class="w-full h-12 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary" />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="email" class="text-sm font-medium block">Email <span class="text-destructive">*</span></label>
+            <input id="email" name="email" required type="email" placeholder="john@example.com" class="w-full h-12 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary" />
+          </div>
+          <div class="space-y-2">
+            <label for="service_type" class="text-sm font-medium block">Service Type</label>
+            <select id="service_type" name="service_type" class="w-full h-12 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary text-foreground">
+              <option value="" disabled selected>Select a service</option>
+              <option value="vinyl_plank">Vinyl Plank Installation</option>
+              <option value="hardwood">Hardwood Installation</option>
+              <option value="tile_backsplash">Tile &amp; Backsplash</option>
+              <option value="stair_finishing">Stair Finishing</option>
+              <option value="carpet">Carpet &amp; Carpet Tile</option>
+              <option value="repairs_custom">Repairs &amp; Custom Work</option>
+              <option value="material_sourcing">Flooring Supply &amp; Material Sourcing</option>
+              <option value="other">Other / Not Sure</option>
+            </select>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div class="space-y-2">
+              <label for="timeline" class="text-sm font-medium block">Timeline</label>
+              <select id="timeline" name="timeline" class="w-full h-12 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary text-foreground">
+                <option>As soon as possible</option>
+                <option>Within 1–2 months</option>
+                <option>Within 3–6 months</option>
+                <option>Just researching</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label for="budget" class="text-sm font-medium block">Budget Range</label>
+              <select id="budget" name="budget" class="w-full h-12 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary text-foreground">
+                <option>Not sure yet</option>
+                <option>Under $3,000</option>
+                <option>$3,000 – $7,000</option>
+                <option>$7,000 – $15,000</option>
+                <option>$15,000+</option>
+              </select>
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="message" class="text-sm font-medium block">Project Details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project — room size, flooring type, timeline, etc." class="w-full min-h-[120px] border border-border bg-background rounded-sm px-3 py-2 text-sm resize-none focus:outline-none focus:ring-1 focus:ring-primary"></textarea>
+          </div>
+          <button type="submit" id="submitBtn" class="w-full inline-flex items-center justify-center bg-[#1A3A6D] hover:bg-[#142d57] text-white font-bold tracking-wide text-base h-14 group shadow-sm rounded-sm transition-colors">
+            <span id="btnLabel" class="inline-flex items-center">Request a Quote
+              <svg class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="bg-primary relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div>
+        <img src="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" alt="Super Installer Logo" class="h-14 w-auto brightness-0 invert opacity-90 mb-4" />
+        <p class="text-white/50 text-sm leading-relaxed max-w-xs">Professional flooring installation across Calgary. Precision, quality, and proper application — every project.</p>
+      </div>
+      <div>
+        <h4 class="font-mono text-[10px] text-secondary/50 tracking-[0.3em] uppercase mb-6">Navigation</h4>
+        <nav class="space-y-3">
+          <a href="#services" class="block text-sm text-white/60 hover:text-white transition-colors">Services</a>
+          <a href="#why-us" class="block text-sm text-white/60 hover:text-white transition-colors">Why Us</a>
+          <a href="#process" class="block text-sm text-white/60 hover:text-white transition-colors">Process</a>
+          <a href="#projects" class="block text-sm text-white/60 hover:text-white transition-colors">Projects</a>
+          <a href="#about" class="block text-sm text-white/60 hover:text-white transition-colors">About</a>
+          <a href="#contact" class="block text-sm text-white/60 hover:text-white transition-colors">Contact</a>
+        </nav>
+      </div>
+      <div>
+        <h4 class="font-mono text-[10px] text-secondary/50 tracking-[0.3em] uppercase mb-6">Contact</h4>
+        <div class="space-y-4 font-mono text-sm">
+          <a href="tel:+15872287873" class="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            587.228.7873
+          </a>
+          <a href="mailto:admin@superinstaller.ca" class="flex items-center gap-3 text-white/60 hover:text-white transition-colors">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            admin@superinstaller.ca
+          </a>
+          <div class="flex items-center gap-3 text-white/60">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div><p>Calgary, Alberta</p><p class="text-white/30 text-xs mt-1">+ Surrounding Area</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <img src="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" alt="Super Installer" class="h-6 w-auto brightness-0 invert opacity-40" />
+        <p class="text-white/30 text-xs font-mono">© <span id="year"></span> Super Installer. All rights reserved.</p>
+      </div>
+      <p class="text-white/20 text-xs font-mono tracking-wider">51.0447° N, 114.0719° W</p>
+    </div>
+  </div>
+  <div class="absolute -bottom-20 -right-20 opacity-[0.03]">
+    <img src="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" alt="" class="w-80 h-80 brightness-0 invert" aria-hidden="true" />
+  </div>
+</footer>
+
+<script>
+/* ════════════════════════════════════════════════════════════
+   PASTE ZONE — the ONLY two lines you edit.
+   Supabase → Settings → API → Project URL + anon/publishable key.
+   (Trailing slash is handled automatically.)
+   ════════════════════════════════════════════════════════════ */
+const SUPABASE_URL  = "https://hooxwpgjcevsryxqhqjc.supabase.co/rest/v1/";
+const SUPABASE_ANON = "sb_publishable_z87EK1QjlnVuUHEbaGt30g_UQ3ymR16";
+/* ════════════════════════════════════════════════════════════ */
+
+/* ── Data (mirrors original components) ── */
+const SERVICES = [
+  {num:"01",title:"Vinyl Plank Installation",desc:"Waterproof, durable, and beautifully installed luxury vinyl plank for any room in your home.",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/a78e7e6ec_generated_image.png",materials:["Luxury Vinyl Plank (LVP)","SPC Core","WPC Core","Click-Lock Systems"]},
+  {num:"02",title:"Carpet & Carpet Tile",desc:"Residential carpet and modular carpet tile installation for bedrooms, basements, and commercial spaces.",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/1e3473f56_generated_image.png",materials:["Broadloom Carpet","Carpet Tile / Modular","Stair Runner","Underlay & Padding"]},
+  {num:"03",title:"Hardwood Installation",desc:"Engineered and solid hardwood flooring installed with precision for lasting beauty and warmth.",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/0e14685cc_generated_image.png",materials:["Solid Hardwood","Engineered Hardwood","Wide Plank","Herringbone & Chevron"]},
+  {num:"04",title:"Tile & Backsplash",desc:"Expert tile work for floors, walls, and backsplashes with clean lines and durable finishes.",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/d806abf16_generated_image.png",materials:["Porcelain Tile","Ceramic Tile","Natural Stone","Mosaic & Subway"]},
+  {num:"05",title:"Stair Finishing",desc:"Custom stair nosing, treads, and risers that seamlessly match your flooring throughout.",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/1b3c5dc71_generated_image.png",materials:["Hardwood Treads","Custom Nosing","Riser Matching","Landing Transitions"]},
+  {num:"06",title:"Repairs & Custom Work",desc:"Seamless flooring repairs and custom installations for unique spaces and transitions.",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/65f1a5a69_generated_image.png",materials:["Board Replacement","Subfloor Repair","Transition Strips","Custom Inlays"]},
+  {num:"07",title:"Flooring Supply & Material Sourcing",desc:"Expert guidance to select and source the right flooring materials for your specific project.",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/423263441_generated_665a6d0f.png",materials:["Product Consultation","Supplier Access","Sample Coordination","Bulk Ordering"]},
+];
+
+const STEPS = [
+  {num:"01",title:"In-Home Consultation",desc:"We assess your space, needs, and vision directly on-site.",icon:'<path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>'},
+  {num:"02",title:"Design & Product Selection",desc:"Expert guidance to choose materials that balance performance and aesthetics.",icon:'<circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/>'},
+  {num:"03",title:"Project Planning",desc:"Clear timelines, measurements, and preparation requirements.",icon:'<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4M12 16h4M8 11h.01M8 16h.01"/>'},
+  {num:"04",title:"Material Coordination & Delivery",desc:"Ensuring everything is ready for a smooth installation.",icon:'<path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18h-5"/><path d="M15 18v-6h4l3 4v2h-2"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/>'},
+  {num:"05",title:"Precision Installation",desc:"Professional execution with attention to every detail.",icon:'<path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"/><path d="m7.5 10.5 2 2M10.5 7.5l2 2M13.5 4.5l2 2M4.5 13.5l2 2"/>'},
+  {num:"06",title:"Final Clean & Walkthrough",desc:"A clean finish and final review to ensure quality standards are met.",icon:'<path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>'},
+];
+
+const BRANDS = [
+  {name:"Harbinger",tagline:"Premium Luxury Vinyl",url:"https://www.harbingerfloors.com/",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/0424766dd_generated_image.png",description:"Canadian-made luxury vinyl flooring built for beauty and durability. Perfect for high-traffic residential and light commercial spaces.",logoText:"Harbinger",logoClass:"italic font-extrabold tracking-tight text-2xl",accent:"#1A1A1A",types:["Luxury Vinyl Plank","SPC Core","Commercial Grade"]},
+  {name:"Twelve Oaks",tagline:"Engineered Hardwood & LVP",url:"https://twelveoaks.ca/",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/0e4a0babd_generated_image.png",description:"Engineered hardwood, luxury vinyl, and laminate with exceptional quality and Canadian roots. Style meets lasting performance.",logoText:"TwelveOaks",logoClass:"font-bold tracking-tight text-2xl",accent:"#5C3D1E",types:["Engineered Hardwood","Luxury Vinyl","Laminate"]},
+  {name:"Home's Pro",tagline:"Building Materials Specialist",url:"https://www.homespros.ca/",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/380af6082_generated_image.png",description:"Edmonton-based distributor specializing in premium flooring and building materials across Alberta — trusted by installers province-wide.",logoText:"HOME'S PRO",logoClass:"font-black text-xl",logoSpacing:"0.2em",accent:"#6B2D8B",types:["Laminate","Vinyl","Hardwood"]},
+  {name:"Centura",tagline:"Tile & Stone Experts",url:"https://www.centura.ca/en",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/8cac407c4_generated_image.png",description:"Canada's leading tile and flooring brand, offering an inspiring range of porcelain, ceramic, and natural stone for any application.",logoText:"CENTURA",logoClass:"font-bold text-2xl",logoSpacing:"0.2em",accent:"#1A5FAD",types:["Porcelain Tile","Ceramic","Natural Stone"]},
+  {name:"Beaulieu",tagline:"Floor Covering Experts",url:"https://beaulieucanada.com/en",image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/5da0ca503_generated_image.png",description:"Over 70 years of floor covering expertise in Canada. A complete range of hardwood, vinyl, carpet, and laminate for every budget and style.",logoText:"beaulieu",logoClass:"font-light text-2xl lowercase",logoSpacing:"0.2em",accent:"#E30613",types:["Hardwood","Vinyl","Carpet & Laminate"]},
+];
+
+const PROJECTS = [
+  {image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/faf711298_generated_image.png",title:"Modern Living Room — Herringbone Hardwood",type:"Hardwood Installation"},
+  {image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/3b08d8712_generated_image.png",title:"Spa Bathroom — Large Format Tile",type:"Tile Installation"},
+  {image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/89ae2b96a_generated_image.png",title:"Grand Entryway — Stone-Look Tile",type:"Tile & Custom Work"},
+  {image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/71c1d2600_generated_image.png",title:"Chef's Kitchen — Luxury Vinyl Plank",type:"Vinyl Plank Installation"},
+  {image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/c24cdbb94_generated_image.png",title:"Custom Staircase — Walnut Treads",type:"Stair Finishing"},
+  {image:"https://media.base44.com/images/public/69c81ec17595940e1e44aac2/516f991c6_generated_image.png",title:"Master Suite — Wide Plank Hardwood",type:"Hardwood Installation"},
+];
+
+/* ── Site Content overrides (Content Portal → Supabase site_content) ── */
+const SLOT_TO_SERVICE = {service_01:"Vinyl Plank Installation",service_02:"Hardwood Installation",service_03:"Tile & Backsplash",service_04:"Stair Finishing",service_05:"Repairs & Custom Work",service_06:"Carpet & Carpet Tile",service_07:"Flooring Supply & Material Sourcing"};
+const SLOT_TO_BRAND = {brand_harbinger:"Harbinger",brand_twelveoaks:"Twelve Oaks",brand_homespro:"Home's Pro",brand_centura:"Centura",brand_beaulieu:"Beaulieu"};
+
+async function applySiteContent(){
+  if (SUPABASE_URL.indexOf('PASTE_') === 0) return;
+  try{
+    const r = await fetch(SUPABASE_URL.replace(/\/+$/,'') + '/rest/v1/site_content?select=section,image_url',
+      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': 'Bearer ' + SUPABASE_ANON } });
+    if (!r.ok) return;
+    (await r.json()).forEach(({section, image_url})=>{
+      if (!image_url) return;
+      if (section === 'hero') { const el = document.getElementById('heroImg'); if (el) el.src = image_url; }
+      else if (section === 'about') { const el = document.getElementById('aboutImg'); if (el) el.src = image_url; }
+      else if (SLOT_TO_SERVICE[section]) { const s = SERVICES.find(x=>x.title===SLOT_TO_SERVICE[section]); if (s) s.image = image_url; }
+      else if (SLOT_TO_BRAND[section]) { const b = BRANDS.find(x=>x.name===SLOT_TO_BRAND[section]); if (b) b.image = image_url; }
+      else if (section.indexOf('portfolio_') === 0) { const i = parseInt(section.split('_')[1],10)-1; if (PROJECTS[i]) PROJECTS[i].image = image_url; }
+    });
+  } catch(e) { /* fall back to built-in images */ }
+}
+
+function renderAll(){
+/* ── Render Services ── */
+document.getElementById('servicesGrid').innerHTML = SERVICES.map((s)=>`
+  <div data-animate class="svc-card group relative overflow-hidden bg-card border border-border/50 hover:border-secondary/40 transition-all duration-500 cursor-pointer" onclick="this.classList.toggle('expanded')">
+    <span class="absolute -top-4 -right-2 text-[120px] font-extrabold text-secondary/[0.07] leading-none select-none pointer-events-none">${s.num}</span>
+    <div class="relative">
+      <div class="aspect-[4/3] overflow-hidden relative">
+        <img src="${s.image}" alt="${s.title}" class="brand-img w-full h-full object-cover" loading="lazy" />
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+      <div class="p-6">
+        <div class="flex items-start justify-between mb-3">
+          <span class="font-mono text-xs text-secondary tracking-wider">${s.num}</span>
+          <svg class="svc-arrow w-4 h-4 text-primary transition-transform duration-300 group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+        <h3 class="text-lg font-bold text-foreground mb-2 tracking-tight">${s.title}</h3>
+        <p class="text-sm text-muted-foreground leading-relaxed">${s.desc}</p>
+        <div class="svc-materials mt-4 pt-4 border-t border-border/50">
+          <span class="font-mono text-[10px] text-secondary tracking-wider uppercase">Recommended Materials</span>
+          <ul class="mt-2 space-y-1.5">
+            ${s.materials.map(m=>`<li class="text-sm text-foreground/70 flex items-center gap-2"><span class="w-1 h-1 rounded-full bg-primary"></span>${m}</li>`).join('')}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>`).join('');
+
+/* ── Render Process ── */
+document.getElementById('processGrid').innerHTML = STEPS.map((st,i)=>`
+  <div data-animate class="relative pl-16">
+    <div class="absolute left-0 top-0"><span class="font-mono text-3xl font-bold text-secondary/20">${st.num}</span></div>
+    ${i<STEPS.length-1 && i%3!==2 ? '<div class="hidden lg:block absolute top-6 left-full w-8 h-[1px] bg-secondary/20"></div>' : ''}
+    <div class="flex items-center gap-3 mb-3">
+      <div class="w-10 h-10 border border-primary/20 flex items-center justify-center">
+        <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${st.icon}</svg>
+      </div>
+      <h3 class="text-lg font-bold text-foreground tracking-tight">${st.title}</h3>
+    </div>
+    <p class="text-muted-foreground leading-relaxed text-sm">${st.desc}</p>
+  </div>`).join('');
+
+/* ── Render Brands ── */
+document.getElementById('brandsGrid').innerHTML = BRANDS.map((b)=>`
+  <div data-animate class="brand-card group bg-card border border-border/50 hover:border-secondary/40 hover:shadow-lg transition-all duration-500 flex flex-col">
+    <div class="aspect-[4/3] overflow-hidden relative">
+      <img src="${b.image}" alt="${b.name} flooring products" class="brand-img w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-4">
+        <span class="${b.logoClass} text-white drop-shadow-lg" ${b.logoSpacing?`style="letter-spacing:${b.logoSpacing}"`:''}>${b.logoText}</span>
+        <p class="text-white/70 text-xs font-mono mt-0.5 tracking-wider">${b.tagline}</p>
+      </div>
+      <div class="absolute top-0 left-0 w-1 h-full" style="background-color:${b.accent}"></div>
+    </div>
+    <div class="p-5 flex flex-col flex-1">
+      <p class="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">${b.description}</p>
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        ${b.types.map(t=>`<span class="text-[11px] font-mono px-2 py-1 border border-border text-muted-foreground">${t}</span>`).join('')}
+      </div>
+      <a href="${b.url}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-primary/80 transition-colors">
+        View Collection
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+      </a>
+    </div>
+  </div>`).join('');
+
+/* ── Render Portfolio ── */
+document.getElementById('projectsGrid').innerHTML = PROJECTS.map((p)=>`
+  <div data-animate class="proj-card relative overflow-hidden group cursor-pointer">
+    <div class="aspect-[3/2] overflow-hidden">
+      <img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover" loading="lazy" />
+    </div>
+    <div class="proj-overlay absolute inset-0 bg-primary/80 flex flex-col justify-end p-6">
+      <span class="font-mono text-[10px] text-secondary tracking-wider uppercase mb-1">${p.type}</span>
+      <h3 class="text-white font-bold text-lg tracking-tight">${p.title}</h3>
+    </div>
+  </div>`).join('');
+
+/* observe newly rendered animated elements */
+document.querySelectorAll('[data-animate]:not(.in-view)').forEach(el=>io.observe(el));
+} /* end renderAll */
+
+/* load content overrides, then render (falls back to built-ins) */
+applySiteContent().finally(renderAll);
+
+/* ── Navbar scroll state ── */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', ()=>{
+  if (window.scrollY > 40) {
+    nav.className = "w-full max-w-7xl transition-all duration-500 px-6 py-3 rounded-sm bg-white/90 backdrop-blur-xl shadow-lg shadow-primary/5 border border-secondary/20";
+  } else {
+    nav.className = "w-full max-w-7xl transition-all duration-500 px-6 py-3 rounded-sm bg-white/60 backdrop-blur-md border border-white/30";
+  }
+});
+
+/* ── Mobile menu ── */
+const toggle = document.getElementById('mobileToggle');
+const menu = document.getElementById('mobileMenu');
+toggle.addEventListener('click', ()=>{
+  menu.classList.toggle('hidden');
+  document.getElementById('iconMenu').classList.toggle('hidden');
+  document.getElementById('iconX').classList.toggle('hidden');
+});
+document.querySelectorAll('.mobile-link').forEach(a=>a.addEventListener('click', ()=>{
+  menu.classList.add('hidden');
+  document.getElementById('iconMenu').classList.remove('hidden');
+  document.getElementById('iconX').classList.add('hidden');
+}));
+
+/* ── Scroll reveal ── */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in-view'); io.unobserve(e.target); } });
+},{ rootMargin:"-40px" });
+document.querySelectorAll('[data-animate],[data-animate-scale],.hero-line').forEach(el=>io.observe(el));
+
+/* ── Year ── */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ── Lead form → Supabase (Intake Agent pre-tagging) ── */
+document.getElementById('leadForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const f = Object.fromEntries(new FormData(this).entries());
+  const lead = {
+    name: f.name, phone: f.phone, email: f.email,
+    product_interest: f.service_type || null,
+    timeline: f.timeline, budget_range: f.budget,
+    notes: f.message, source: 'website',
+    tag: (f.timeline === 'As soon as possible' || f.budget === '$15,000+') ? 'A'
+       : (f.timeline === 'Just researching') ? 'C' : 'B'
+  };
+  const btn = document.getElementById('submitBtn');
+  const label = document.getElementById('btnLabel');
+  btn.disabled = true; label.textContent = 'Sending...';
+  try {
+    if (SUPABASE_URL.indexOf('PASTE_') === 0) throw new Error('SETUP: PASTE ZONE values not filled in on this copy.');
+    const r = await fetch(SUPABASE_URL.replace(/\/+$/, '') + '/rest/v1/leads', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'apikey': SUPABASE_ANON,
+        'Authorization': 'Bearer ' + SUPABASE_ANON,
+        'Prefer': 'return=minimal'
+      },
+      body: JSON.stringify(lead)
+    });
+    if (!r.ok) throw new Error('HTTP ' + r.status + ': ' + (await r.text()).slice(0, 300));
+    this.classList.add('hidden');
+    const s = document.getElementById('formSuccess');
+    s.classList.remove('hidden'); s.classList.add('flex');
+  } catch (err) {
+    btn.disabled = false;
+    label.innerHTML = 'Request a Quote <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>';
+    alert("Something went wrong sending your request. Please call or text 587-228-7873 and we'll take care of you directly.");
+    console.error(err);
+  }
+});
+</script>
+</body>
+</html>

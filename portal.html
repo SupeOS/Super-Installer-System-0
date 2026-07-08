@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Content Portal | Super Installer</title>
+<link rel="icon" type="image/png" href="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  fontFamily: { inter:['Inter','sans-serif'], mono:['JetBrains Mono','monospace'] },
+  colors: {
+    background:'hsl(210 20% 98%)', foreground:'hsl(0 0% 18%)', card:'hsl(0 0% 100%)',
+    primary:{DEFAULT:'hsl(216 62% 26%)',foreground:'hsl(0 0% 98%)'},
+    secondary:{DEFAULT:'hsl(0 0% 75%)'},
+    muted:{DEFAULT:'hsl(210 20% 96%)',foreground:'hsl(0 0% 45%)'},
+    border:'hsl(0 0% 89%)',
+  },
+  borderRadius:{sm:'0.25rem'},
+}}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',sans-serif}</style>
+</head>
+<body class="bg-background text-foreground font-inter min-h-screen">
+
+<script>
+/* ════════════════════════════════════════════════════════════
+   PASTE ZONE — same two values as index.html.
+   ════════════════════════════════════════════════════════════ */
+const SUPABASE_URL  = "https://hooxwpgjcevsryxqhqjc.supabase.co/rest/v1";
+const SUPABASE_ANON = "sb_publishable_z87EK1QjlnVuUHEbaGt30g_UQ3ymR16";
+/* ════════════════════════════════════════════════════════════ */
+const API = SUPABASE_URL.replace(/\/+$/,'');
+let TOKEN = null;
+</script>
+
+<!-- ═══════ LOGIN ═══════ -->
+<div id="loginView" class="min-h-screen flex items-center justify-center px-4">
+  <div class="w-full max-w-sm p-8 border border-border bg-card">
+    <img src="https://media.base44.com/images/public/user_69c81d029624d7a60f82004c/332a1b4f0_LOGO-SuperInstaller1-transparentbg.png" alt="Super Installer" class="h-12 w-auto mb-6" />
+    <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">Admin</span>
+    <h1 class="text-2xl font-extrabold text-primary mt-2 tracking-tight">Content Portal</h1>
+    <p class="text-muted-foreground text-sm mt-2 mb-8">Owner sign-in required.</p>
+    <form id="loginForm" class="space-y-4">
+      <div><label class="text-sm font-medium block mb-1.5">Email</label>
+        <input id="loginEmail" type="email" required class="w-full h-11 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary" /></div>
+      <div><label class="text-sm font-medium block mb-1.5">Password</label>
+        <input id="loginPass" type="password" required class="w-full h-11 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary" /></div>
+      <button type="submit" id="loginBtn" class="w-full bg-[#1A3A6D] hover:bg-[#142d57] text-white font-bold h-12 rounded-sm transition-colors">Sign In</button>
+      <p id="loginErr" class="hidden text-sm text-red-600"></p>
+    </form>
+  </div>
+</div>
+
+<!-- ═══════ PORTAL ═══════ -->
+<div id="portalView" class="hidden">
+  <div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+    <div class="mb-10 flex items-start justify-between gap-4 flex-wrap">
+      <div>
+        <span class="font-mono text-xs text-secondary tracking-[0.3em] uppercase">Admin</span>
+        <h1 class="text-3xl md:text-4xl font-extrabold text-primary mt-2 tracking-tight">Content Portal</h1>
+        <p class="text-muted-foreground mt-2 text-base">Manage images for every section of superinstaller.ca. Changes go live on the next page load — no redeploy.</p>
+      </div>
+      <button onclick="location.reload()" class="text-sm text-muted-foreground hover:text-primary font-medium border border-border px-4 h-10 rounded-sm">Sign out</button>
+    </div>
+    <div id="groups" class="space-y-14">
+      <p class="text-muted-foreground">Loading content…</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ EDITOR MODAL ═══════ -->
+<div id="modal" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4">
+  <div class="bg-white w-full max-w-lg rounded-sm shadow-2xl">
+    <div class="flex items-center justify-between px-6 py-4 border-b border-border">
+      <h3 id="modalTitle" class="font-bold"></h3>
+      <button onclick="closeModal()" class="text-muted-foreground hover:text-foreground text-xl leading-none">&times;</button>
+    </div>
+    <div class="p-6">
+      <div class="flex w-full mb-6 border border-border rounded-sm overflow-hidden text-sm font-medium">
+        <button id="tabUpload" onclick="setTab('upload')" class="flex-1 py-2.5 bg-[#1A3A6D] text-white">Upload</button>
+        <button id="tabUrl" onclick="setTab('url')" class="flex-1 py-2.5 bg-white text-foreground">From URL</button>
+      </div>
+      <div id="paneUpload">
+        <label class="text-sm font-medium mb-3 block">Choose an image file from your device</label>
+        <label class="flex flex-col items-center justify-center w-full h-36 border-2 border-dashed border-border rounded-sm cursor-pointer hover:border-primary/40 hover:bg-primary/[0.02] transition-colors">
+          <span id="uploadLabel" class="text-sm text-muted-foreground">Click to upload (JPG, PNG, WebP)</span>
+          <input id="fileInput" type="file" accept="image/*" class="hidden" />
+        </label>
+      </div>
+      <div id="paneUrl" class="hidden">
+        <label class="text-sm font-medium mb-3 block">Paste an image URL from the web</label>
+        <div class="flex gap-2">
+          <input id="urlInput" placeholder="https://example.com/image.jpg" class="flex-1 h-11 border border-border bg-background rounded-sm px-3 text-sm focus:outline-none focus:ring-1 focus:ring-primary" />
+          <button onclick="saveUrl()" class="bg-[#1A3A6D] hover:bg-[#142d57] text-white h-11 px-5 rounded-sm text-sm font-semibold">Save</button>
+        </div>
+        <div id="urlPreviewWrap" class="hidden mt-3 aspect-video rounded-sm overflow-hidden border border-border">
+          <img id="urlPreview" class="w-full h-full object-cover" alt="Preview" />
+        </div>
+      </div>
+      <p id="modalStatus" class="hidden mt-4 text-sm font-medium"></p>
+    </div>
+  </div>
+</div>
+
+<script>
+const GROUPS = [
+  { title:"Hero & About", sections:["hero","about"] },
+  { title:"Services", sections:["service_01","service_02","service_03","service_04","service_05","service_06","service_07"] },
+  { title:"Portfolio", sections:["portfolio_01","portfolio_02","portfolio_03","portfolio_04","portfolio_05","portfolio_06"] },
+  { title:"Brand Partners", sections:["brand_harbinger","brand_twelveoaks","brand_homespro","brand_centura","brand_beaulieu"] },
+];
+let CONTENT = {};      // section -> {id,label,image_url}
+let ACTIVE = null;     // section being edited
+
+/* ── Auth ── */
+document.getElementById('loginForm').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const btn = document.getElementById('loginBtn'); const err = document.getElementById('loginErr');
+  btn.disabled = true; btn.textContent = 'Signing in…'; err.classList.add('hidden');
+  try {
+    if (SUPABASE_URL.indexOf('PASTE_') === 0) throw new Error('PASTE ZONE values not filled in on this copy.');
+    const r = await fetch(API + '/auth/v1/token?grant_type=password', {
+      method:'POST',
+      headers:{'Content-Type':'application/json','apikey':SUPABASE_ANON},
+      body: JSON.stringify({ email: document.getElementById('loginEmail').value, password: document.getElementById('loginPass').value })
+    });
+    const data = await r.json();
+    if (!r.ok || !data.access_token) throw new Error(data.error_description || data.msg || 'Invalid login');
+    TOKEN = data.access_token;
+    document.getElementById('loginView').classList.add('hidden');
+    document.getElementById('portalView').classList.remove('hidden');
+    loadContent();
+  } catch (ex) {
+    err.textContent = ex.message; err.classList.remove('hidden');
+    btn.disabled = false; btn.textContent = 'Sign In';
+  }
+});
+
+const H = ()=>({ 'apikey':SUPABASE_ANON, 'Authorization':'Bearer '+TOKEN });
+
+/* ── Load + render slots ── */
+async function loadContent(){
+  const r = await fetch(API + '/rest/v1/site_content?select=id,section,label,image_url&order=section', { headers: H() });
+  const rows = await r.json();
+  CONTENT = {}; rows.forEach(x=>CONTENT[x.section]=x);
+  document.getElementById('groups').innerHTML = GROUPS.map(g=>`
+    <div>
+      <h2 class="text-lg font-bold mb-5 pb-3 border-b border-border">${g.title}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        ${g.sections.map(sec=>{
+          const c = CONTENT[sec]; if(!c) return '';
+          return `<div class="bg-white border border-border rounded-sm overflow-hidden">
+            <div class="aspect-video bg-muted relative overflow-hidden group">
+              ${c.image_url ? `<img src="${c.image_url}" alt="${c.label}" class="w-full h-full object-cover" loading="lazy" />` : `<div class="w-full h-full flex items-center justify-center text-muted-foreground text-xs font-mono">NO IMAGE</div>`}
+              <div class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                <button onclick="openModal('${sec}')" class="bg-white text-[#1A3A6D] font-semibold text-sm px-4 py-2 rounded-sm shadow">✎ Change</button>
+              </div>
+            </div>
+            <div class="px-3 py-2 flex items-center justify-between">
+              <span class="text-xs font-medium truncate">${c.label}</span>
+              ${c.image_url ? '<span class="text-green-500 text-sm shrink-0">✓</span>' : ''}
+            </div>
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`).join('');
+}
+
+/* ── Modal ── */
+function openModal(sec){
+  ACTIVE = sec;
+  document.getElementById('modalTitle').textContent = CONTENT[sec].label;
+  document.getElementById('urlInput').value = '';
+  document.getElementById('urlPreviewWrap').classList.add('hidden');
+  document.getElementById('modalStatus').classList.add('hidden');
+  document.getElementById('uploadLabel').textContent = 'Click to upload (JPG, PNG, WebP)';
+  setTab('upload');
+  document.getElementById('modal').classList.remove('hidden');
+}
+function closeModal(){ document.getElementById('modal').classList.add('hidden'); ACTIVE = null; }
+function setTab(t){
+  document.getElementById('paneUpload').classList.toggle('hidden', t!=='upload');
+  document.getElementById('paneUrl').classList.toggle('hidden', t!=='url');
+  document.getElementById('tabUpload').className = 'flex-1 py-2.5 ' + (t==='upload' ? 'bg-[#1A3A6D] text-white' : 'bg-white text-foreground');
+  document.getElementById('tabUrl').className = 'flex-1 py-2.5 ' + (t==='url' ? 'bg-[#1A3A6D] text-white' : 'bg-white text-foreground');
+}
+function status(msg, ok){
+  const el = document.getElementById('modalStatus');
+  el.textContent = msg; el.className = 'mt-4 text-sm font-medium ' + (ok ? 'text-green-600' : 'text-red-600');
+  el.classList.remove('hidden');
+}
+
+/* ── Save via row update ── */
+async function saveImageUrl(url){
+  const r = await fetch(API + '/rest/v1/site_content?section=eq.' + encodeURIComponent(ACTIVE), {
+    method:'PATCH',
+    headers: { ...H(), 'Content-Type':'application/json', 'Prefer':'return=minimal' },
+    body: JSON.stringify({ image_url: url, updated_at: new Date().toISOString() })
+  });
+  if (!r.ok) throw new Error('Save failed: ' + (await r.text()).slice(0,200));
+  status('Saved! The live site updates on next page load.', true);
+  await loadContent();
+  setTimeout(closeModal, 900);
+}
+
+/* ── From URL ── */
+document.getElementById('urlInput').addEventListener('input', (e)=>{
+  const v = e.target.value.trim();
+  const wrap = document.getElementById('urlPreviewWrap');
+  if (v) { document.getElementById('urlPreview').src = v; wrap.classList.remove('hidden'); }
+  else wrap.classList.add('hidden');
+});
+async function saveUrl(){
+  const v = document.getElementById('urlInput').value.trim();
+  if (!v) return;
+  try { await saveImageUrl(v); } catch (ex) { status(ex.message, false); }
+}
+
+/* ── Upload to Supabase Storage ('site' bucket, public) ── */
+document.getElementById('fileInput').addEventListener('change', async (e)=>{
+  const file = e.target.files[0]; if (!file) return;
+  document.getElementById('uploadLabel').textContent = 'Uploading…';
+  try {
+    const ext = (file.name.split('.').pop() || 'jpg').toLowerCase();
+    const path = ACTIVE + '-' + Date.now() + '.' + ext;
+    const r = await fetch(API + '/storage/v1/object/site/' + path, {
+      method:'POST',
+      headers: { ...H(), 'Content-Type': file.type || 'image/jpeg', 'x-upsert':'true' },
+      body: file
+    });
+    if (!r.ok) throw new Error('Upload failed: ' + (await r.text()).slice(0,200));
+    await saveImageUrl(API + '/storage/v1/object/public/site/' + path);
+  } catch (ex) {
+    status(ex.message, false);
+    document.getElementById('uploadLabel').textContent = 'Click to upload (JPG, PNG, WebP)';
+  }
+});
+</script>
+</body>
+</html>
